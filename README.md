@@ -18,6 +18,11 @@ Tensorflowの基礎を学ぶチュートリアル
     - 上記以外にも様々なノードがある．これらを組み合わせて計算グラフを作る
     - 作った計算グラフはSessionオブジェクトを作って`run()`することで実行される
 
+### GettingStartedWithTensorflow_LinearRegression.ipynb
+
+`GettingStartedWithTensorflow.ipynb`で1ステップずつ書いたプログラムのまとめ．
+同じプログラムを単純に実行しただけ．
+
 ### GettingStartedWithTensorflow_EstimatorBasicUsage.ipynb
 
 高レベルなTensorflowライブラリである`tf.estimator`の使い方の基礎を学ぶチュートリアル
@@ -43,6 +48,9 @@ Tensorflowの基礎を学ぶチュートリアル
 
 ### GettingStartedWithTensorflow_ACustomModel.ipynb
 
+`tf.estimator`は，事前定義されたモデル以外も使用可能．
+`tf.estimator.Estimator`を使えば自分でカスタムモデルを作れてしまう．(`tf.estimator.LinearRegressor`は，実は`tf.estimator.Estimator`のサブクラス)
 
-### GettingStartedWithTensorflow_LinearRegression.ipynb
+このチュートリアルでは`LinearRegressor`と等価なモデルを，Tensorflowの低レベルなAPIを使って実装してみる．
+`tf.estimator.Estimator`を継承する代わりに，`tf.estimator.Estimator`の引数`model_fn`に，自分で定義した関数を与えればできてしまう．
 
